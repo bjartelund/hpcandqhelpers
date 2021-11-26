@@ -1,0 +1,4 @@
+#!/bin/bash
+ls fep*.dcd > dcd-files
+sort -t'_' -k 3n dcd-files > sorted-dcd-files
+xargs -a sorted-dcd-files catdcd -o merged.dcd
